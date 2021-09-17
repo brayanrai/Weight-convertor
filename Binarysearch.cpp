@@ -7,7 +7,7 @@ int main()
     // cout<<"enter the size of array:";
     // cin>>p;
 
-    cout<<"How many numbers you want to enter in array:\n";
+    cout<<"\nHow many numbers you want to enter in array:\n";
     cin>> n;
 
     cout<<"enter the numbers:\n";
@@ -15,20 +15,20 @@ int main()
     {
         cin>>data[k];
     }
-    cout<<"you have entered the following numbers:\n";
+    cout<<"\nyou have entered the following numbers:\n";
     for(int k=1;k<=n;k++)
     {
         cout<<data[k]<<",";
     }
-    cout<<"Enter the number you want to search :\n";
+    cout<<"\nEnter the number you want to search :\n";
     cin>>item;
 
-    lb=data[1],ub=data[n];
+    lb=1,ub=n;
     beg=lb,end=ub, mid= int(lb+ub)/2;
     cout<<"Lower bound="<<lb<<endl;
     cout<<"upper bound="<<ub<<endl;
 
-    while(data[mid]!=item && beg!=item)
+    while(data[mid]!=item && beg!=end)
     {
         if(item<data[mid])
         {
@@ -42,14 +42,14 @@ int main()
     }
     if(data[mid]==item)
     {
-        cout<<"!NUmber found!";
+        cout<<"NUMBER FOUND at index:\n";
         loc=mid;
         cout<<loc<<endl;
     }
     else
     {
-        loc=0;
-        cout<<loc<<endl;
+        cout<<"Number is not in the data"<<endl;
+
     }
     return 0;
 }
