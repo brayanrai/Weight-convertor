@@ -16,6 +16,7 @@ def clear():
 
 def kg_to_g():
     # value=entry.get()
+    # chech git
     # global conversion
     # global valuetoconvert
     # valuetoconvert=int(value)
